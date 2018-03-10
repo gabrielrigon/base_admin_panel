@@ -35,7 +35,7 @@ class User < ActiveRecord::Base
 
   # ---- default values ----
 
-  default_value_for :user_type_id, UserType.where(alias: 'administrator').first.id
+  # default_value_for :user_type_id, UserType.where(alias: 'administrator').first.id
 
   # ---- delegates ----
 
