@@ -1,39 +1,33 @@
-Base painel admin
-========
+# Base Admin Panel
 
-Base para sistema administrativo, utilizando Rails 4.2.3, banco de dados PostgreSQL e tema AdminLTE. I18n padronizado para pt-BR.
+The base for administrative system, using Rails 4.2.3, PostgreSQL and AdminLTE theme. The i18n standardized for pt-BR.
 
-### Recursos instalados
+### Installed features
+- Devise (with invitable module)
+- CanCanCan
+- Inherited Resources
+- Paperclip
+- Sidekiq
+- Simple Form
+- Slim
+- Squeel
+- AdminLTE
+- Bootstrap
+- FontAwesome
+- Simple Navigation
+- Toastr
+- Notify.js
+- jQuery Mask
+- SweetAlert
+- LazyLoad (pictures)
 
-* Devise / Devise Invitable
-* CanCanCan
-* Inherited Resources
-* Paperclip
-* Sidekiq
-* Simple Form
-* Slim
-* Squeel
-* AdminLTE
-* Bootstrap
-* FontAwesome
-* Simple Navigation
-* Toastr
-* Notify.js
-* jQuery Mask
-* SweetAlert
-* LazyLoad (imagens)
+### Use
+After cloning the project, you must adjust:
 
+- **CanCanCan**: Class Ability as needed, so far implemented for the `User` model
+- **Devise**: Model `User` as required, db configured with devise for: `recoverable`, `trackable`, `lockable`, `invitable`
+- **Theme**: Change the app / views / layouts / admin.html.erb file, replacing the color with blue, yellow, green, purple, red, black, with variations -light after the colors, ex: blue-light
 
-### Uso  
-
-Após clonar o projeto, deve-se ajustar:  
-
-**CanCanCan:** Classe Ability conforme necessidade, até o momento foi implementado para o model User  
-**Devise:** Model User conforme necessidade, db configurado com devise para: `recoverable`, `trackable`, `lockable`, `invitable`  
-**Tema:** Alterar o arquivo `app/views/layouts/admin.html.erb`, substituindo a cor por `blue`, `yellow`, `green`, `purple`, `red`, `black`, com variações `-light` após as cores, ex: `blue-light`
-
-
-### TODO
-
-**Devise:** Padronização nos e-mails com templates e informações sensíveis  
-**Searchkick:** Implementar elasticsearch
+## Roadmap
+- [ ] Devise: Standardization in emails with templates and sensitive information
+- [ ] Searchkick: Implement elasticsearch
